@@ -1,0 +1,338 @@
+/* ===================== ROOT ===================== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #000428, #004e92);
+
+  --primary: #00d4ff;
+  --primary-dark: #001f4d;
+  --primary-mid: #003366;
+  --accent: #005eff;
+
+  --text-main: #00d4ff;
+  --text-dark: #000;
+  --text-light: #ffffff;
+
+  --glass-bg: rgba(0, 78, 146, 0.25);
+  --glass-border: rgba(0, 212, 255, 0.3);
+
+  --shadow: 2px 2px 2px black;
+  --shadow-glow: 0 0 10px #00d4ff;
+
+  --border-radius: 10px;
+}
+
+/* ===================== BODY ===================== */
+body {
+  max-width: 100%;
+  min-width: 320px;
+  min-height: calc(100svh - 20px);
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 10px !important;
+}
+
+/* ===================== BUTTON LIST ===================== */
+.listOfButtons {
+  height: auto;
+  min-height: 50px;
+  margin: 10px 0;
+  padding: 6px 8px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+
+  border-radius: var(--border-radius);
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+/* ===================== BUTTON ===================== */
+.Buttons {
+  height: 40px;
+  padding: 0 10px;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: 400;
+
+  background: var(--primary-dark);
+  color: var(--primary);
+
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow);
+
+  transition: .5s;
+  white-space: nowrap;
+}
+
+.Buttons:hover {
+  transform: scale(1.05);
+  background: var(--primary-mid);
+}
+
+/* ===================== CONTACT SECTION ===================== */
+.contact-section {
+  box-shadow: var(--shadow);
+  padding: 15px 5px 15px 15px;
+
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+
+  border-radius: var(--border-radius);
+  max-width: 800px;
+}
+
+/* ===================== PERSON ===================== */
+.person {
+  height: 100px;
+  /* padding: 5px; */
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 2px; */
+  gap: 1px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.person:hover {
+  background: var(--primary-mid);
+  box-shadow: var(--shadow);
+}
+
+/* ===================== INFO ===================== */
+.Info {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+
+  background: var(--primary-dark);
+  color: var(--primary);
+
+  border-radius: 10px 10px 0 0;
+  text-shadow: var(--shadow-glow);
+
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* ===================== CONTACT ACTION ===================== */
+.Cont {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  font-weight: bold;
+
+  background: var(--primary-dark);
+
+  border-radius: 0 0 10px 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* ===================== ROLL NUMBER ===================== */
+.RollNumber {
+  margin-left: 10px;
+  transition: .5s;
+}
+
+/* ===================== LINKS ===================== */
+a {
+  font-size: 35px;
+  padding-top: 4px;
+  transition: .5s;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ===================== ICON COLORS ===================== */
+.fa_phone {
+  text-shadow: 1px 1px 2px var(--primary);
+}
+
+.fa_comment-dots {
+  text-shadow: 1px 1px 2px var(--primary);
+}
+
+.fa_whatsapp {
+  text-shadow: 1px 1px 2px var(--primary);
+}
+
+/* ===================== ICON HOVER ===================== */
+.person:hover .fa_phone,
+.person:hover .fa_comment-dots,
+.person:hover .fa_whatsapp {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+
+/* ===================== SEARCH ===================== */
+.Search_contact_data {
+  font-size: 20px;
+  border: 2px solid var(--primary);
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+
+  background: var(--primary-dark);
+  color: var(--primary);
+}
+
+/* ===================== ICON ===================== */
+.icon {
+  font-size: 28px;
+  transition: 0.3s;
+  color: var(--primary);
+}
+.phone{color: rgb(255, 58, 58);}
+.message{color: rgb(0, 208, 255);}
+.whatsapp{color: rgb(0, 255, 0);}
+
+.person:hover .icon {
+  transform: scale(1.2);
+}
+
+/* ===================== MEDIA ===================== */
+@media (max-width: 768px) {
+  .listOfButtons {
+    padding: 4px 6px;
+  }
+
+  .Buttons {
+    height: 35px;
+    font-size: 16px;
+    padding: 0 8px;
+    margin: 3px;
+  }
+
+  .contact-section {
+    padding: 10px 3px 10px 10px;
+  }
+
+  .person {
+    height: 80px;
+    padding: 3px;
+    margin-bottom: 8px;
+  }
+
+  .Info {
+    gap: 5px;
+    padding: 0 5px;
+    font-size: 14px;
+  }
+
+  .Cont {
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .RollNumber {
+    margin-left: 5px;
+  }
+
+  a {
+    font-size: 28px;
+    padding-top: 2px;
+  }
+
+  .Search_contact_data {
+    font-size: 16px;
+    padding: 4px 8px;
+    /* margin: 10px 0; */
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Buttons {
+    height: 30px;
+    font-size: 14px;
+    padding: 0 6px;
+    margin: 2px;
+  }
+
+  .person {
+    height: 70px;
+  }
+
+  .Info {
+    font-size: 12px;
+  }
+
+  .Cont {
+    gap: 5px;
+  }
+
+  a {
+    font-size: 24px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .Search_contact_data {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+}
+
+
+
+
+
+
+
+
+/*  */
+.searchBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--primary);
+  padding: 0 8px;
+  border-radius: 10px;
+  background: var(--primary-dark);
+  margin: 15px 0;
+}
+
+.searchIcon {
+  color: var(--primary);
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--primary);
+}
+input::placeholder {
+  color: var(--primary);
+  opacity: 1; /* important for full brightness */
+}
