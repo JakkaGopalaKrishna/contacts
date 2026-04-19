@@ -19,6 +19,7 @@ function App() {
     const input = prompt(`Enter password for ${category}`, ' ');
     if (input === '') {
       setActive(category);
+      setSearch("")
     } else {
       alert("❌ Wrong Password");
     }

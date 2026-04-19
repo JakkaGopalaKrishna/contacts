@@ -93,7 +93,9 @@ body {
   border: 1px solid var(--glass-border);
 
   border-radius: var(--border-radius);
-  max-width: 800px;
+  /* max-width: 800px; */
+  height: 65svh;
+  overflow: scroll;
 }
 
 /* ===================== PERSON ===================== */
@@ -335,4 +337,20 @@ a {
 input::placeholder {
   color: var(--primary);
   opacity: 1; /* important for full brightness */
+}
+
+/* scroll bar remove code css */
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE/Old Edge */
+* {
+  -ms-overflow-style: none;
 }
