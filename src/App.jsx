@@ -31,7 +31,7 @@ function App() {
     ) || [];
 
   return (
-    <>
+    <div className="app-shell">
       <Buttons
         categories={Object.keys(data)}
         active={active}
@@ -40,26 +40,28 @@ function App() {
 
       {active && (
         <>
-          {/* <Contacts data={filtered} /> */}
           <div className="searchBox">
             <IoIosSearch className="searchIcon" />
             <input placeholder="Search..."
               value={search}
               onChange={e => setSearch(e.target.value)}
-              className="Search_contact_data" 
+              className="Search_contact_data"
               id="searchInput"
             />
           </div>
-          {/* <input
-            placeholder="Search..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            className="Search_contact_data" id="searchInput"
-          /> */}
           <Contacts data={filtered} />
         </>
       )}
-    </>
+
+      <footer className="site-footer">
+        <p>JGK © 2026 Contact Manager</p>
+        <a 
+          style={{fontSize:"10px"}} 
+          href="https://docs.google.com/spreadsheets/d/1UTHNIOHsOLwXO0gtwHSaoM-u3Ga2VV0ejHwTXW66-f0"
+          target="blank"
+        >_data</a>
+      </footer>
+    </div>
   );
 }
 

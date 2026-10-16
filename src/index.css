@@ -7,42 +7,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   font-family: 'Trebuchet MS', Arial, sans-serif;
   box-sizing: border-box;
   margin: 10px !important;
 }
 
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .listOfButtons {
-  height: auto;
+  width: 100%;
+  max-width: 300px;
   min-height: 50px;
   margin: 10px 0;
   padding: 6px 8px;
-  display: flex;gap: 5px;
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
   background: linear-gradient(to right, #e6f734, #fca72f);
   border-radius: 10px;
-  overflow: auto;
-  scrollbar-width: none;
+  box-sizing: border-box;
 }
 
 .Buttons {
+  width: 100%;
   height: 40px;
-  padding: 0 10px;
-  margin: 5px;
-  font-size: 20px;
-  font-weight: 400;
+  padding: 0 12px;
+  font-size: 18px;
+  font-weight: 600;
   background: #04f076;
   color: rgb(43, 106, 173);
+  border: none;
   border-radius: 10px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 0px 0px 1px rgb(80, 76, 76);
   box-shadow: 2px 2px 2px black;
   transition: .5s;
-  white-space: nowrap;
+  outline: none;
 }
 
 .Buttons:hover {
@@ -51,7 +60,7 @@ body {
 
 .contact-section {
   box-shadow: 0 0 2px black;
-  padding: 15px 5px 15px 15px;
+  padding: 15px;
   background: #faf8f8;
   border-radius: 10px;
   max-width: 800px;
@@ -150,6 +159,23 @@ a {
   outline: none;
 }
 
+.site-footer {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #dff7ff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
 .icon {
   font-size: 28px;
   transition: 0.3s;
@@ -186,7 +212,7 @@ a {
   }
 
   .contact-section {
-    padding: 10px 3px 10px 10px;
+    padding: 10px;
   }
 
   .person {

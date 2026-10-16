@@ -67,6 +67,8 @@ body {
 
   border-radius: var(--border-radius);
   cursor: pointer;
+  border:2px solid var(--primary);
+
 
   display: flex;
   align-items: center;
@@ -87,13 +89,13 @@ body {
 /* ===================== CONTACT SECTION ===================== */
 .contact-section {
   box-shadow: var(--shadow);
-  padding: 15px 5px 15px 15px;
+  padding: 15px;
 
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
 
   border-radius: var(--border-radius);
-  /* max-width: 800px; */
+  /* max-width: 500px; */
   height: 65svh;
   overflow: scroll;
 }
@@ -230,7 +232,7 @@ a {
   }
 
   .contact-section {
-    padding: 10px 3px 10px 10px;
+    padding: 10px;
   }
 
   .person {
@@ -353,4 +355,24 @@ input::placeholder {
 /* IE/Old Edge */
 * {
   -ms-overflow-style: none;
+}
+
+/* ===================== Footer ===================== */
+
+.site-footer {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;justify-content: space-between;align-items: end;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #dff7ff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
