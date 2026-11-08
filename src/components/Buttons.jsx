@@ -1,6 +1,6 @@
 export default function Buttons({ categories, onSelect, active }) {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "5px" }}>
+    <div style={{width: "300px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "5px" }}>
       <select
         className="Buttons"
         value={active}

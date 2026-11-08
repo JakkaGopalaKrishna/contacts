@@ -21,6 +21,7 @@
 }
 
 /* ===================== BODY ===================== */
+
 body {
   max-width: 100%;
   min-width: 320px;
@@ -33,6 +34,18 @@ body {
   font-family: 'Trebuchet MS', Arial, sans-serif;
   box-sizing: border-box;
   margin: 10px !important;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ===================== BUTTON LIST ===================== */
@@ -96,7 +109,8 @@ body {
 
   border-radius: var(--border-radius);
   /* max-width: 500px; */
-  height: 65svh;
+  width: 300px;
+  height: 80svh;
   overflow: scroll;
 }
 
@@ -315,6 +329,7 @@ a {
 
 /*  */
 .searchBox {
+  width: 300px;
   display: flex;
   align-items: center;
   border: 1px solid var(--primary);
